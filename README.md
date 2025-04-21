@@ -6,11 +6,8 @@ React Native bridging library that integrates QQ SDKs. QQ 登陆 分享，集成
 
 ## 前言
 
-首先向各位声明，本库是在 [react-native-qq](https://github.com/reactnativecn/react-native-qq) 基础上进行重写。  
-
-本身是维护给自己使用的，考虑到自身使用和其它开发者的需要，最终决定开一个新仓库，提供给新项目使用。  
-
-最后，感谢 [lvbingru](https://github.com/lvbingru)，[tdzl2003](https://github.com/tdzl2003) 和各位开发者为 react-native-qq 做出的贡献。
+基于 haxibiao/react-native-qq-lib 做了针对react native 0.7x版本的适配
+还有一个fork [https://github.com/yangdong-wuye](https://github.com/yangdong-wuye/react-native-qq-lib) 是针对新sdk的适配。
 
 ### 集成 QQ SDK 包版本
 
@@ -139,7 +136,10 @@ import * as QQAPI from 'react-native-qq-lib';
 ### API
 
 #### QQAPI.init()
-
+只需要Android下使用，iOS下使用会报错。
+```
+if (Platform.OS === 'android') QQAPI.init()
+```
 初始化，调用其他api时请先调用该api（3.1.0以前版本无需调用此方法,会自动初始化）
 
 
