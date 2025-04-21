@@ -23,13 +23,13 @@ React Native bridging library that integrates QQ SDKs. QQ 登陆 分享，集成
 ### 首先安装 npm 包
 
 ```bash
-yarn add github:haxibiao/react-native-qq-lib
+yarn add github:myoula/react-native-qq-lib
 ```
 
 或
 
 ```bash
-npm install -D github:haxibiao/react-native-qq-lib
+npm install -D github:myoula/react-native-qq-lib
 ```
 
 然后执行
@@ -116,6 +116,17 @@ manifestPlaceholders = [
 ```
 
 以后如果需要修改 APPID，只需要修改此一处。
+
+在`android/app/src/main/AndroidManifest.xml`里，增加：
+```
+<queries>
+<package android:name="com.tencent.mm" />
+<package android:name="com.tencent.mobileqq" />
+<package android:name="com.tencent.tim" />
+<package android:name="com.tencent.minihd.qq"/>
+<package android:name="com.tencent.qqlite"/>
+</queries>
+```
 
 ## 如何使用
 
